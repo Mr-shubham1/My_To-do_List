@@ -1,17 +1,17 @@
 const todoformbutton = document.querySelector(".todo_form button");
 const todoforminput = document.querySelector(".todo_form input[type=\"text\"]");
 const todolist = document.querySelector(".todo_list");
-let listcount = 0;
+
 
 todoformbutton.addEventListener("click",(e)=>{
     e.preventDefault();
 
     if(todoforminput.value)
     {
-        listcount+=1;
+        
         const newlist = document.createElement("li");
         const newlistinnerhtml = `<div class="list_item">
-        <button class="list_item_btn">${listcount}</button>
+        <button class="list_item_btn">&bull;</button>
         <p>${todoforminput.value}</p>
         </div>
         <span class="todo_list_cross">&Cross;</span>`
