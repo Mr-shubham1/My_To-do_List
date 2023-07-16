@@ -105,4 +105,24 @@ cursor: pointer;
 }
 
 
+/*    media querry      */
+
+@media(max-width:900px){
+    .container .todo_form input{
+        max-width: 250px;
+    }
+    .container .todo_form button{
+        padding:5px 25px ;
+    }
+    .todo_list li{
+        max-width: 340px;
+    }
+    .container{
+        margin: 25px auto;
+        max-width: 375px;
+    }
+}
+
+
+
 
