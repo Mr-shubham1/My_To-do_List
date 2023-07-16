@@ -18,6 +18,7 @@ todoformbutton.addEventListener("click",(e)=>{
         newlist.innerHTML = newlistinnerhtml;
         todolist.append(newlist);
         todoforminput.value ="";
+        savelist();
 
     }
     else{
@@ -34,9 +35,20 @@ todolist.addEventListener("click",(e)=>{
     const targetlistpara = e.target.parentNode.childNodes[3];
     console.log(targetlistpara);
     targetlistpara.style.textDecoration = "line-through";
+        savelist();
     }
     if(e.target.classList.contains("todo_list_cross")){
         e.target.parentNode.remove();
+        savelist();
     }
 })
+
+function savelist(){
+    localStorage.setItem("data",todolist.innerHTML);
+}
+function showlist(){
+    todolist.innerHTML = localStorage.getItem("data");
+}
+
+showlist();
 
